@@ -130,13 +130,7 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            for (int i = 0; i < numberList.Count; i++)
-            {
-                if (numberList[i] % 2 == 1)
-                {
-                    numberList.Remove(numberList[i]);
-                }
-            }
+            numberList.RemoveAll(x => x % 2 != 0);
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
